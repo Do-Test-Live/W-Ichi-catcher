@@ -1,5 +1,5 @@
 .theme-color-1 {
-    --theme-color: #494955;
+    --theme-color:  #fd9c4c;
     --theme-color-rgb: 217, 159, 70
 }
 
@@ -512,7 +512,7 @@
 }
 
 .breadscrumb-section .breadscrumb-contain nav .breadcrumb .breadcrumb-item i {
-    color: #4a5568
+    color: #fd9c4c
 }
 
 .breadscrumb-section .breadscrumb-contain nav .breadcrumb .breadcrumb-item.active {
@@ -533,7 +533,7 @@
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f105";
-    color: #4a5568
+    color:  #fd9c4c
 }
 
 .breadscrumb-section .breadscrumb-order {
@@ -1022,8 +1022,8 @@
     transition: all 0.3s ease;
     position: relative;
     background: #ff6b6b;
-    background: -webkit-gradient(linear, left top, right top, from(#ff6b6b), to(#ff4f4f));
-    background: linear-gradient(90deg, #ff6b6b 0%, #ff4f4f 100%);
+    background: -webkit-gradient(linear, left top, right top, from( #fd9c4c), to( #fd9c4c));
+    background: linear-gradient(90deg,  #fd9c4c 0%,  #fd9c4c 100%);
     border: none;
     z-index: 0
 }
@@ -3182,7 +3182,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .custome-pagination .pagination .page-item .page-link {
-    color: #4a5568;
+    color: #fd9c4c;
     border: 1px solid transparent
 }
 
@@ -3394,7 +3394,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .product-wrapper .slick-dots li.slick-active button {
     margin: 0;
     width: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
-    background-color: var(--theme-color);
+    background-color:  #fd9c4c;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
 }
@@ -3852,7 +3852,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .theme-option .back-to-top {
-    background-color: var(--theme-color);
+    background-color:  #fd9c4c;
     padding: 0;
     border-radius: 5px;
     z-index: 1;
@@ -5165,7 +5165,7 @@ h2 {
     line-height: 2em;
     text-transform: capitalize;
     margin: 0;
-    color: #000000;
+    color:  #fd9c4c;
 }
 
 h3 {
@@ -5180,6 +5180,7 @@ h4 {
     line-height: 2em;
     margin: 0;
     font-weight: 400;
+    color:  #fd9c4c;
 }
 
 h5 {
@@ -5201,11 +5202,11 @@ span {
 }
 
 .theme-color {
-    color: var(--theme-color) !important
+    color:  #fd9c4c; !important
 }
 
 .theme-bg-color {
-    background: var(--theme-color) !important
+    background:  #fd9c4c; !important
 }
 
 .banner-contain {
@@ -8484,8 +8485,8 @@ header .top-nav .navbar-top .middle-box .search-box .input-group button.bg-theme
 }
 
 header .top-nav .navbar-top .middle-box .search-box .input-group button.search-button-2 {
-    background-color: var(--theme-color);
-    border-color: var(--theme-color)
+    background-color: #fd9c4c;
+    border-color:  #fd9c4c;
 }
 
 [dir="rtl"] header .top-nav .navbar-top .middle-box .search-box .input-group button {
@@ -8679,7 +8680,7 @@ header .top-nav .navbar-top .rightside-box .right-side-menu .right-side .header-
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: #ff7272;
+    background-color:  #fd9c4c;
     font-size: 12px;
     padding: 0;
     border-radius: 2px
@@ -8998,7 +8999,7 @@ header .header-nav .header-nav-left .dropdown-category {
 }
 
 header .header-nav .header-nav-left .dropdown-category-2 {
-    background: linear-gradient(93.33deg, #222221 12.35%, #2f2f2d 99.38%)
+    background: linear-gradient(93.33deg, #fd9c4c 12.35%, #fd9c4c 99.38%)
 }
 
 header .header-nav .header-nav-left .dropdown-category .feather {
@@ -9285,7 +9286,7 @@ header .header-nav .header-nav-left .category-dropdown .category-list li a i {
 }
 
 header .header-nav .header-nav-right .deal-button {
-    color: var(--theme-color);
+    color: #ffffff;
     padding: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320))) calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
     position: relative;
     border-radius: 5px;
@@ -9300,8 +9301,7 @@ header .header-nav .header-nav-right .deal-button::before {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--theme-color);
-    opacity: 0.1;
+    background-color:  #fd9c4c;
     z-index: -1
 }
 
@@ -16043,7 +16043,7 @@ header .offcanvas-backdrop {
 }
 
 .add-to-cart-box {
-    background-color: #f8f8f8;
+    background-color:  #fd9c4c !important;
     border-radius: 50px;
     position: relative;
     max-width: 250px
@@ -16054,7 +16054,7 @@ header .offcanvas-backdrop {
     width: 100%;
     font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
     margin-top: 10px;
-    color: #4a5568;
+    color: #ffffff;
     border-radius: 50px;
     font-weight: 500
 }
