@@ -492,8 +492,7 @@ include ('cart_backend.php');
                     <a href="#" class="foot-logo theme-logo">
                         <img src="assets/images/logo/logo-22.png" style="height: 52px;" class="img-fluid blur-up lazyload" alt="">
                     </a>
-                    <p class="information-text information-text-2">it is a long established fact that a reader will<br>
-                        be distracted by the readable content.</p>
+                    <p class="information-text information-text-2">Discover the Finest Collection at our Figure and Toys Store.</p>
                     <ul class="social-icon">
                         <li class="light-bg">
                             <a href="#" class="footer-link-color">
@@ -531,14 +530,6 @@ include ('cart_backend.php');
                         <h4 class="text-white">Store infomation</h4>
                     </div>
                     <ul class="footer-address footer-contact">
-                        <li>
-                            <a href="javascript:void(0)" class="light-text">
-                                <div class="inform-box flex-start-box">
-                                    <i data-feather="map-pin"></i>
-                                    <p>Location</p>
-                                </div>
-                            </a>
-                        </li>
 
                         <li>
                             <a href="javascript:void(0)" class="light-text">
