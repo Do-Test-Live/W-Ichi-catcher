@@ -6,7 +6,7 @@ if (isset($_SESSION['id'])) {
 include('admin/include/dbController.php');
 $db_handle = new DBController();
 
-include('cart_backend.php');
+include ('cart_backend.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,23 +55,6 @@ include('cart_backend.php');
 
     <!-- Template css -->
     <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script>
-        function isDesktop() {
-            const userAgent = navigator.userAgent;
-            return !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
-        }
-
-        // Function to show an alert for desktop users
-        function showAlertForDesktop() {
-            alert('Sorry, this website is not accessible from desktop devices. Please visit from a mobile device.');
-            window.location.replace("https://www.google.com/");
-        }
-
-        // Check if the user is browsing from a desktop device and show the alert
-        if (isDesktop()) {
-            showAlertForDesktop();
-        }
-    </script>
 </head>
 
 <body>
@@ -195,8 +178,7 @@ include('cart_backend.php');
                                 </span>
                         </button>
                         <a href="index.html" class="web-logo nav-logo">
-                            <img src="assets/images/logo/logo-1.png" style="height: 52px;"
-                                 class="img-fluid blur-up lazyload" alt="">
+                            <img src="assets/images/logo/logo-1.png" style="height: 52px;" class="img-fluid blur-up lazyload" alt="">
                         </a>
 
                         <div class="header-nav-middle">
@@ -430,9 +412,7 @@ include('cart_backend.php');
                                             for ($j = 0; $j < $no_fetch_sub_cat; $j++) {
                                                 ?>
                                                 <ul class="category-list custom-padding custom-height">
-                                                    <li>
-                                                        <a href="index.php?subcat=<?php echo $fetch_sub_cat[$j]['id']; ?>"><?php echo $fetch_sub_cat[$j]['sub_cat_name']; ?></a>
-                                                    </li>
+                                                    <li><a href="index.php?subcat=<?php echo $fetch_sub_cat[$j]['id'];?>"><?php echo $fetch_sub_cat[$j]['sub_cat_name'];?></a></li>
                                                 </ul>
                                                 <?php
                                             }
@@ -610,7 +590,7 @@ include('cart_backend.php');
                     </nav>
                 </div>
                 <?php
-            } elseif (isset($_GET['subcat'])) {
+            }elseif (isset($_GET['subcat'])) {
                 $id = $_GET['subcat'];
                 $fetch_sub_cat_name = $db_handle->runQuery("select * from sub_cat where id = '$id'");
                 $sub_cat_name = $fetch_sub_cat_name[0]['sub_cat_name'];
@@ -751,7 +731,8 @@ include('cart_backend.php');
                     </nav>
                 </div>
                 <?php
-            } else {
+            }
+            else {
                 ?>
                 <div class="col-custome-9">
 
@@ -973,7 +954,7 @@ include('cart_backend.php');
 
         <div class="sub-footer sub-footer-lite section-b-space section-t-space">
             <div class="left-footer">
-                <p class="light-text">2023 Copyright By enjoy Powered By NGT</p>
+                <p class="light-text">2023 Copyright By Ichi-Catcher </br> Powered By NGT</p>
             </div>
 
             <ul class="payment-box">
@@ -1154,8 +1135,6 @@ include('cart_backend.php');
 <!-- script js -->
 <script src="assets/js/script.js"></script>
 
-<!-- thme setting js -->
-<script src="assets/js/theme-setting.js"></script>
 
 <script>
     $(document).ready(function () {

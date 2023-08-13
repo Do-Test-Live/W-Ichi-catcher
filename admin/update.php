@@ -25,7 +25,6 @@ if (isset($_POST['updateCategory'])) {
 
 }
 
-
 if (isset($_POST['updateProduct'])) {
     $id = $db_handle->checkValue($_POST['id']);
     $p_name = $db_handle->checkValue($_POST['p_name']);
@@ -84,7 +83,7 @@ if (isset($_POST['updateProduct'])) {
         }
 
         $databaseValue = implode(',', $dataFileName);
-        $query .= ",p_image='" . $databaseValue . "'";
+        $query .= ",`p_image`='" . $databaseValue . "'";
         $fetch_image = $db_handle->runQuery("select p_image from product WHERE id={$id}");
         $img = explode(',', $fetch_image[0]['p_image']);
         foreach ($img as $i) {
@@ -93,11 +92,13 @@ if (isset($_POST['updateProduct'])) {
     }
 
     $data = $db_handle->insertQuery("UPDATE `product` SET `category_id`='$product_category',`product_code`='$product_code',`p_name`='$p_name',`description`='$product_description',
-                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`cost` = '$cost',`product_weight` = '$product_weight'," . $query . " WHERE id={$id}");
-    echo "<script>
+                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`cost` = '$cost',`product_weight` = '$product_weight'" . $query . " WHERE id={$id}");
+    if($data){
+        echo "<script>
                 document.cookie = 'alert = 3;';
-                window.location.href='Product';
+                window.location.href = 'Product'
                 </script>";
+    }
 }
 
 if (isset($_POST['updateCourse'])) {

@@ -7193,7 +7193,7 @@ footer .sub-footer {
 
 @media (max-width: 767px) {
     footer .sub-footer {
-        margin-bottom: 50px
+        margin-bottom: 0
     }
 }
 

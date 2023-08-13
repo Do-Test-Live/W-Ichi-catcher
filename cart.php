@@ -565,7 +565,7 @@ include ('cart_backend.php');
 
         <div class="sub-footer sub-footer-lite section-b-space section-t-space">
             <div class="left-footer">
-                <p class="light-text">2023 Copyright By enjoy Powered By NGT</p>
+                <p class="light-text">2023 Copyright By Ichi-Catcher </br> Powered By NGT</p>
             </div>
 
             <ul class="payment-box">
