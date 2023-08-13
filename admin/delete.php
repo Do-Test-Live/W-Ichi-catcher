@@ -47,3 +47,8 @@ if(isset($_GET['adminId'])){
     echo 'success';
 }
 
+if(isset($_GET['subcatId'])){
+    $db_handle->insertQuery("delete from sub_cat where id = " . $_GET['subcatId'] . "");
+    echo 'success';
+}
+

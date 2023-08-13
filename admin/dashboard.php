@@ -64,21 +64,21 @@ if (!isset($_SESSION['userid'])) {
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-xxl-6 col-sm-6">
+					<!--<div class="col-xl-3 col-xxl-6 col-sm-6">
 						<div class="card grd-card">
 							<div class="card-body">
 								<div class="media align-items-center">
 									<div class="media-body mr-2">
                                         <?php
-                                        $total_revenue = $db_handle->runQuery("SELECT SUM(total_purchase) as total FROM `billing_details` where approve = '3'");
-                                        ?>
-										<h2 class="text-white font-w600"><?php echo $total_revenue[0]['total'];?></h2>
+/*                                        $total_revenue = $db_handle->runQuery("SELECT SUM(total_purchase) as total FROM `billing_details` where approve = '3'");
+                                        */?>
+										<h2 class="text-white font-w600"><?php /*echo $total_revenue[0]['total'];*/?></h2>
 										<span class="text-white">Total Revenue</span>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 					<div class="col-xl-3 col-xxl-6 col-sm-6">
 						<div class="card grd-card">
 							<div class="card-body">
@@ -109,13 +109,13 @@ if (!isset($_SESSION['userid'])) {
 							</div>
 						</div>
 					</div>
-                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                  <!--  <div class="col-xl-3 col-xxl-6 col-sm-6">
                         <div class="card grd-card">
                             <div class="card-body">
                                 <div class="media align-items-center">
                                     <div class="media-body mr-2">
                                         <?php
-                                        $sum_profit = 0;
+/*                                        $sum_profit = 0;
                                         $invoice_details = $db_handle->runQuery("SELECT * FROM `invoice_details`");
                                         $row_count = $db_handle->numRows("SELECT * FROM `invoice_details`");
                                         for ($i = 0; $i < $row_count; $i++) {
@@ -127,21 +127,21 @@ if (!isset($_SESSION['userid'])) {
                                             $profit = ($selling_price - $cost) * $quantity;
                                             $sum_profit = $sum_profit + $profit;
                                         }
-                                        ?>
-                                        <h2 class="text-white font-w600"><?php echo $sum_profit;?> HKD</h2>
+                                        */?>
+                                        <h2 class="text-white font-w600"><?php /*echo $sum_profit;*/?> HKD</h2>
                                         <span class="text-white">Total Profit</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-xxl-6 col-sm-6">
+                    </div>-->
+                 <!--   <div class="col-xl-3 col-xxl-6 col-sm-6">
                         <div class="card grd-card">
                             <div class="card-body">
                                 <div class="media align-items-center">
                                     <div class="media-body mr-2">
                                         <?php
-                                        $sum_profit = 0;
+/*                                        $sum_profit = 0;
                                         $invoice_details = $db_handle->runQuery("SELECT * FROM `invoice_details`");
                                         $row_count = $db_handle->numRows("SELECT * FROM `invoice_details`");
                                         for ($i = 0; $i < $row_count; $i++) {
@@ -157,14 +157,14 @@ if (!isset($_SESSION['userid'])) {
                                                 $sum_profit = $sum_profit + $profit;
                                             }
                                         }
-                                        ?>
-                                        <h2 class="text-white font-w600"><?php echo $sum_profit;?> HKD</h2>
+                                        */?>
+                                        <h2 class="text-white font-w600"><?php /*echo $sum_profit;*/?> HKD</h2>
                                         <span class="text-white">Total Monthly Profit</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 				</div>
 
             </div>

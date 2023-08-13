@@ -14,12 +14,12 @@ $currency = "hkd";
  */
 define('STRIPE_API_KEY', 'sk_test_51Js7yMEef0ZfRYif2EiZDwOsgckQWfhufIaCy6AA4V2khdgX3HjPVUVayrmgoaSZrbKWurDNaS51ykeUjVkDvH3C00jqJ2LxSf');
 define('STRIPE_PUBLISHABLE_KEY', 'pk_test_51Js7yMEef0ZfRYif2yukLvrLbqS7IhDndBYnLlxB6oFfD354C5GDXlrkoUfhR0ICChKmTrzeWi7sfKUvrQmXajXJ00hPvG6I62');
-define('STRIPE_SUCCESS_URL', 'https://localhost/W-Royal-Cheese/payment-success.php'); //Payment success URL
-define('STRIPE_CANCEL_URL', 'https://localhost/W-Royal-Cheese/payment-cancel.php'); //Payment cancel URL
+define('STRIPE_SUCCESS_URL', 'https://localhost/Enjoy/payment-success.php'); //Payment success URL
+define('STRIPE_CANCEL_URL', 'https://localhost/Enjoy/payment-cancel.php'); //Payment cancel URL
 
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_USERNAME', 'uwmoqghbmovgk');
-define('DB_PASSWORD', '#)*G6%51fb1z');
-define('DB_NAME', 'dbjix2ujozm1hu');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'enjoy');
 

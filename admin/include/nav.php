@@ -11,12 +11,12 @@
                 </a>
             </li>
 
-            <li>
+         <!--   <li>
                 <a class="ai-icon" href="Banner">
                     <i class="flaticon-381-album-1"></i>
                     <span class="nav-text">Banner</span>
                 </a>
-            </li>
+            </li>-->
 
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -26,6 +26,17 @@
                 <ul aria-expanded="false">
                     <li><a href="Add-Category">Add Category</a></li>
                     <li><a href="Category">Category List</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                    <span class="nav-text">Sub Category</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="Add-Subcategory">Add Subcategory</a></li>
+                    <li><a href="Subcategory">Subcategory List</a></li>
                 </ul>
             </li>
             <!--<li>
@@ -58,7 +69,7 @@
                     <li><a href="Stock">Stock List</a></li>
                 </ul>
             </li>
-            <li>
+      <!--      <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-database-2"></i>
                     <span class="nav-text">Course</span>
@@ -67,8 +78,8 @@
                     <li><a href="Add-Course">Add Course</a></li>
                     <li><a href="Course">Course List</a></li>
                 </ul>
-            </li>
-            <li>
+            </li>-->
+          <!--  <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-notepad"></i>
                     <span class="nav-text">Promo Code</span>
@@ -77,8 +88,8 @@
                     <li><a href="Add-Promo-Code">Add Promo Code</a></li>
                     <li><a href="Promo-Code">Promo Code List</a></li>
                 </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            </li>-->
+           <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Analysis</span>
                 </a>
@@ -88,7 +99,7 @@
                     <li><a href="Store-Analysis">Store Analysis</a></li>
                     <li><a href="Profit-Loss">Profit-Loss Analysis</a></li>
                 </ul>
-            </li>
+            </li>-->
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
@@ -99,30 +110,30 @@
                     <li><a href="Confirm-Order">Complete order</a></li>
                 </ul>
             </li>
-            <li>
+         <!--   <li>
                 <a href="Review" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-6"></i>
                     <span class="nav-text">Review</span>
                 </a>
-            </li>
-            <li>
+            </li>-->
+          <!--  <li>
                 <a href="Report" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
                     <span class="nav-text">Report</span>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="Customer">
                     <i class="flaticon-381-internet"></i>
                     <span class="nav-text">Customer</span>
                 </a>
             </li>
-            <li>
+          <!--  <li>
                 <a href="Delivery-Charges">
                     <i class="flaticon-381-controls-3"></i>
                     <span class="nav-text">Delivery Charges</span>
                 </a>
-            </li>
+            </li>-->
             <!--<li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>

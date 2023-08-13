@@ -72,13 +72,6 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Product Name (EN)</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" name="p_name_en"
-                                                       value="<?php echo $data[0]["p_name_en"]; ?>" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Product Price (For Multiple Please Separate with Comma)</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="product_price"
@@ -137,10 +130,6 @@ if (!isset($_SESSION['userid'])) {
                                             <textarea class="form-control" rows="4" id="comment" name="product_description" required><?php echo $data[0]["description"]; ?></textarea>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label>Product Description * (EN)</label>
-                                            <textarea class="form-control" rows="4" id="comment" name="product_description_en" required><?php echo $data[0]["description_en"]; ?></textarea>
-                                        </div>
-                                        <div class="form-group col-md-12">
                                             <label>Select Product Category *</label>
                                             <select class="form-control default-select" id="sel1"
                                                     name="product_category" required>
@@ -175,20 +164,6 @@ if (!isset($_SESSION['userid'])) {
                                                     </option>
                                                     <option value="0" <?php echo ($data[0]["status"] == 0) ? "selected" : ""; ?>>
                                                         Deactivate
-                                                    </option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Deal Today</label>
-                                            <div class="col-sm-9">
-                                                <select class="default-select  form-control wide" name="today_deal"
-                                                        required>
-                                                    <option value="1" <?php echo ($data[0]["deal_today"] == 1) ? "selected" : ""; ?>>
-                                                        Yes
-                                                    </option>
-                                                    <option value="0" <?php echo ($data[0]["deal_today"] == 0) ? "selected" : ""; ?>>
-                                                        No
                                                     </option>
                                                 </select>
                                             </div>

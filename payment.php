@@ -32,16 +32,16 @@ if (isset($_POST["placeOrder"])) {
     $city = $db_handle->checkValue($_POST['city']);
     $zip_code = $db_handle->checkValue($_POST['zip_code']);
     $note = $db_handle->checkValue($_POST['note']);
-    $discount = $db_handle->checkValue($_POST['discount']);
-    $delivery_charge = $db_handle->checkValue($_POST['delivery_charge']);
+    $discount = 0;
+    $delivery_charge = 0;
     $addInfo = 0;
 
     if (!empty($_POST['addInfo'])) {
         $addInfo = 1;
     }
 
-    $payment = $db_handle->checkValue($_POST['payment']);
-    $shipping = $db_handle->checkValue($_POST['shipping']);
+    $payment = 'online payment';
+    $shipping = '';
 
     $updated_at = date("Y-m-d H:i:s");
 
@@ -89,56 +89,6 @@ if (isset($_POST["placeOrder"])) {
                        `city`, `zip_code`, `password`, `membership_point`, `inserted_at`, `updated_at`) 
                        VALUES ('$name','$email','$phone','$address','$city','$zip_code','$password',
                                '$purchase_points','$updated_at','$updated_at')");
-        }
-    }
-
-    if ($payment != 'Credit Card') {
-        $email_to = $email;
-        $subject = 'Royal Cheese';
-
-
-        $headers = "From: Royal Cheese <" . $db_handle->from_email() . ">\r\n";
-        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-
-        $messege = "
-            <html>
-                <body style='background-color: #eee; font-size: 16px;'>
-                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <h3 style='color:black'>Order Placed Successfully</h3>
-                    <p style='color:black;'>
-                    Your order is successfully placed. We will inform you about the delivery status soon. Please download the copy of your invoice from: <a href = 'https://Royal Cheese.ngt.hk/admin/print_invoice.php?id=$id' target='_blank'>Here</a>
-                    </p>
-                </div>
-                </body>
-            </html>";
-        if (mail($email_to, $subject, $messege, $headers)) {
-
-            $email_to = $db_handle->notify_email();
-            $subject = 'Royal Cheese';
-
-
-            $headers = "From: Royal Cheese <" . $db_handle->from_email() . ">\r\n";
-            $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-
-            $messege = "
-            <html>
-                <body style='background-color: #eee; font-size: 16px;'>
-                <div style='min-width: 200px; background-color: #ffffff; padding: 20px; margin: auto;'>
-                    <p style='color:black;'>
-                        New Order Arrived. Pyment option: $payment .
-                    </p>
-                </div>
-                </body>
-            </html>";
-
-            if (mail($email_to, $subject, $messege, $headers)) {
-                ?>
-                echo "<script>
-                    alert("Your order has been placed successfully! Please check your email for more details.");
-                    window.location.href='Home';
-                </script>";
-                <?php
-            }
         }
     }
 

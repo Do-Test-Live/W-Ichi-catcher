@@ -5,32 +5,11 @@ $db_handle = new DBController();
 date_default_timezone_set("Asia/Hong_Kong");
 
 if (isset($_POST["add_cat"])) {
-    $name = $db_handle->checkValue($_POST['cat_name']);
     $name_cn = $db_handle->checkValue($_POST['cat_name_cn']);
-    $image = '';
-    if (!empty($_FILES['cat_image']['name'])) {
-        $RandomAccountNumber = mt_rand(1, 99999);
-        $file_name = $RandomAccountNumber . "_" . $_FILES['cat_image']['name'];
-        $file_size = $_FILES['cat_image']['size'];
-        $file_tmp  = $_FILES['cat_image']['tmp_name'];
-
-        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
-        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
-            $attach_files = '';
-            echo "<script>
-                document.cookie = 'alert = 5;';
-                window.location.href='Add-Category';
-                </script>";
-
-        } else {
-            move_uploaded_file($file_tmp, "assets/cat_img/" . $file_name);
-            $image = "assets/cat_img/" . $file_name;
-        }
-    }
 
     $inserted_at = date("Y-m-d H:i:s");
 
-    $insert = $db_handle->insertQuery("INSERT INTO `category`(`c_name`,`c_name_en`, `image`,  `inserted_at`) VALUES ('$name_cn','$name','$image','$inserted_at')");
+    $insert = $db_handle->insertQuery("INSERT INTO `category`(`c_name`,  `inserted_at`) VALUES ('$name_cn','$inserted_at')");
 
     echo "<script>
                 document.cookie = 'alert = 3;';
@@ -40,19 +19,17 @@ if (isset($_POST["add_cat"])) {
 
 if (isset($_POST["add_product"])) {
     $product_name = $db_handle->checkValue($_POST['product_name']);
-    $product_name_en = $db_handle->checkValue($_POST['product_name_en']);
     $product_code = $db_handle->checkValue($_POST['product_code']);
     $product_weight = $db_handle->checkValue($_POST['product_weight']);
     $product_category = $db_handle->checkValue($_POST['product_category']);
+    $product_subcategory = $db_handle->checkValue($_POST['product_subcategory']);
     $selling_price = $db_handle->checkValue($_POST['selling_price']);
     $cost = $db_handle->checkValue($_POST['cost']);
     $product_status = $db_handle->checkValue($_POST['product_status']);
-    $today_deal = $db_handle->checkValue($_POST['today_deal']);
     $product_description = $db_handle->checkValue($_POST['product_description']);
-    $product_description_en = $db_handle->checkValue($_POST['product_description_en']);
     $inserted_at = date("Y-m-d H:i:s");
 
-    $products_image='';
+    $products_image = '';
     $arr = array();
     if (!empty($_FILES['product_image']['tmp_name'][0])) {
         // At least one image is selected
@@ -104,9 +81,9 @@ if (isset($_POST["add_product"])) {
         $products_image = '';
     }
 
-    $insert = $db_handle->insertQuery("INSERT INTO `product` (`category_id`, `product_code`,`product_weight`, `p_name`,`p_name_en`,`product_price`, `description`,`description_en`, `p_image`,`status`, `inserted_at`,`cost`,`deal_today`) VALUES 
-                ('$product_category','$product_code','$product_weight','$product_name','$product_name_en','$selling_price','$product_description','$product_description_en','$products_image','$product_status','$inserted_at','$cost','$today_deal')");
-    if($insert){
+    $insert = $db_handle->insertQuery("INSERT INTO `product` (`category_id`, `product_code`,`product_weight`, `p_name`,`product_price`, `description`, `p_image`,`status`, `inserted_at`,`cost`,`subcat_id`) VALUES 
+                ('$product_category','$product_code','$product_weight','$product_name','$selling_price','$product_description','$products_image','$product_status','$inserted_at','$cost','$product_subcategory')");
+    if ($insert) {
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Add-Product';
@@ -116,7 +93,7 @@ if (isset($_POST["add_product"])) {
 
 }
 
-if(isset($_POST['add_course'])){
+if (isset($_POST['add_course'])) {
     $course_name = $db_handle->checkValue($_POST['course_name']);
     $course_name_en = $db_handle->checkValue($_POST['course_name_en']);
     $course_type = $db_handle->checkValue($_POST['course_type']);
@@ -132,7 +109,7 @@ if(isset($_POST['add_course'])){
         $RandomAccountNumber = mt_rand(1, 99999);
         $file_name = $RandomAccountNumber . "_" . $_FILES['course_image']['name'];
         $file_size = $_FILES['course_image']['size'];
-        $file_tmp  = $_FILES['course_image']['tmp_name'];
+        $file_tmp = $_FILES['course_image']['tmp_name'];
 
         $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
@@ -155,7 +132,7 @@ if(isset($_POST['add_course'])){
                 </script>";
 }
 
-if(isset($_POST['add_promo_code'])){
+if (isset($_POST['add_promo_code'])) {
     $coupon_name = $db_handle->checkValue($_POST['coupon_name']);
     $coupon_code = $db_handle->checkValue($_POST['coupon_code']);
     $promo_type = $db_handle->checkValue($_POST['promo_type']);
@@ -185,7 +162,7 @@ if (isset($_POST["admin_insert"])) {
         $RandomAccountNumber = mt_rand(1, 99999);
         $file_name = $RandomAccountNumber . "_" . $_FILES['admin_image']['name'];
         $file_size = $_FILES['admin_image']['size'];
-        $file_tmp  = $_FILES['admin_image']['tmp_name'];
+        $file_tmp = $_FILES['admin_image']['tmp_name'];
 
         $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
@@ -211,7 +188,7 @@ if (isset($_POST["admin_insert"])) {
                 </script>";
 }
 
-if(isset($_POST['customer_signup'])){
+if (isset($_POST['customer_signup'])) {
     $customer_name = $db_handle->checkValue($_POST['customer_name']);
     $customer_email = $db_handle->checkValue($_POST['customer_email']);
     $password = $db_handle->checkValue($_POST['password']);
@@ -222,15 +199,15 @@ if(isset($_POST['customer_signup'])){
     $insert = $db_handle->insertQuery("INSERT INTO `customer`(`customer_name`, `email`, `number`, `password`, `inserted_at`,`membership_point`) 
 VALUES ('$customer_name','$customer_email','$customer_number','$password','$inserted_at','$membership_point')");
 
-    if($insert){
-            $email_to = $customer_email;
-            $subject = '王家芝士寵工房 會員註冊';
+    if ($insert) {
+        $email_to = $customer_email;
+        $subject = '王家芝士寵工房 會員註冊';
 
 
-            $headers = "From: Royal Cheese <" . $db_handle->from_email() . ">\r\n";
-            $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+        $headers = "From: Royal Cheese <" . $db_handle->from_email() . ">\r\n";
+        $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-            $message = <<<HTML
+        $message = <<<HTML
                         <html lang="en">
 
                         <head>
@@ -449,18 +426,18 @@ VALUES ('$customer_name','$customer_email','$customer_number','$password','$inse
 
                         </html>
  HTML;
-            if (mail($email_to, $subject, $message, $headers)) {
-                echo "<script>
+        if (mail($email_to, $subject, $message, $headers)) {
+            echo "<script>
                 alert('您的帳戶創建成功。享受購物!');
                 document.cookie = 'alert = 3;';
                 window.location.href='../login.php';
                 </script>";
-            }
+        }
     }
 }
 
 
-if(isset($_POST['add_quantity'])){
+if (isset($_POST['add_quantity'])) {
     $category_id = $db_handle->checkValue($_POST['category_id']);
     $product_id = $db_handle->checkValue($_POST['product_id']);
     $product_quantity = $db_handle->checkValue($_POST['product_quantity']);
@@ -469,21 +446,35 @@ if(isset($_POST['add_quantity'])){
 
     $check_value = $db_handle->runQuery("SELECT `quantity` FROM `stock` WHERE category_id='$category_id' AND product_id='$product_id'");
     $row = $db_handle->numRows("SELECT `quantity` FROM `stock` WHERE category_id='$category_id' AND product_id='$product_id'");
-    if($row > 0){
-        for($i=0; $i<$row; $i++){
+    if ($row > 0) {
+        for ($i = 0; $i < $row; $i++) {
             $previous_quantity = $check_value[$i]['quantity'];
         }
         $updated_quantity = $product_quantity + $previous_quantity;
-        $update = $db_handle ->insertQuery("UPDATE `stock` SET `quantity`='$updated_quantity',`inserted_at`='$inserted_at' WHERE category_id='$category_id' AND product_id='$product_id'");
+        $update = $db_handle->insertQuery("UPDATE `stock` SET `quantity`='$updated_quantity',`inserted_at`='$inserted_at' WHERE category_id='$category_id' AND product_id='$product_id'");
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Add-Stock';
                 </script>";
-    }else{
+    } else {
         $insert_stock = $db_handle->insertQuery("INSERT INTO `stock`(`category_id`, `product_id`, `quantity`, `inserted_at`) VALUES ('$category_id','$product_id','$product_quantity','$inserted_at')");
         echo "<script>
                 document.cookie = 'alert = 3;';
                 window.location.href='Add-Stock';
+                </script>";
+    }
+}
+
+if (isset($_POST['add_sub_cat'])) {
+    $sub_cat_name = $db_handle->checkValue($_POST['sub_cat_name']);
+    $category = $db_handle->checkValue($_POST['category']);
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $insert_sub_cat = $db_handle->insertQuery("INSERT INTO `sub_cat`(`sub_cat_name`, `cat_id`, `inserted_at`) VALUES ('$sub_cat_name','$category','$inserted_at')");
+    if ($insert_sub_cat) {
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Subcategory';
                 </script>";
     }
 }

@@ -5,7 +5,7 @@
     <a href="Dashboard" class="brand-logo">
         <div class="header-left">
             <div class="dashboard_bar">
-                <img src="../assets/images/logo/2.png" alt="logo" style="width: 200px;">
+                <img src="../assets/images/logo/logo-1.png" alt="logo" style="width: 200px;">
             </div>
         </div>
     </a>

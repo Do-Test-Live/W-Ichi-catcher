@@ -122,10 +122,10 @@ if (!empty($_GET['session_id'])) {
 <?php if ($statusMsg=="Your Payment has been Successful!") {
 
     $email_to = $customer_email;
-    $subject = 'Royal Cheese';
+    $subject = 'Enjoy';
 
 
-    $headers = "From: Royal Cheese <" . $db_handle->from_email() . ">\r\n";
+    $headers = "From: Enjoy <" . $db_handle->from_email() . ">\r\n";
     $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
     $messege = "
@@ -142,7 +142,7 @@ if (!empty($_GET['session_id'])) {
     if (mail($email_to, $subject, $messege, $headers)) {
 
         $email_to = $db_handle->notify_email();
-        $subject = 'Royal Cheese';
+        $subject = 'Enjoy';
 
 
         $headers = "From: Royal Cheese <" . $db_handle->from_email() . ">\r\n";
@@ -162,7 +162,8 @@ if (!empty($_GET['session_id'])) {
         if (mail($email_to, $subject, $messege, $headers)) {
             ?>
             <script>
-                location.href = "Home";
+                alert('Purchase Successfully!')
+                location.href = "index.php";
             </script>
             <?php
         } else { ?>

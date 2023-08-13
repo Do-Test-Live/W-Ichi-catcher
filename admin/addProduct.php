@@ -62,10 +62,6 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="text" class="form-control" name="product_name" placeholder="" required>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label>Product Name * (ENG)</label>
-                                            <input type="text" class="form-control" name="product_name_en" placeholder="" required>
-                                        </div>
-                                        <div class="form-group col-md-12">
                                             <label>Product Code</label>
                                             <input type="text" class="form-control" name="product_code" placeholder="" required>
                                         </div>
@@ -75,13 +71,27 @@ if (!isset($_SESSION['userid'])) {
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Select Product Category *</label>
-                                            <select class="form-control default-select" id="sel1" name="product_category" required>
+                                            <select class="form-control default-select" id="productCategory" name="product_category" required>
                                                 <?php
                                                 $cat = $db_handle->runQuery("SELECT * FROM `category`");
                                                 $row_count = $db_handle->numRows("SELECT * FROM `category`");
                                                 for ($i = 0; $i < $row_count; $i++) {
                                                     ?>
                                                     <option value="<?php echo $cat[$i]["id"]; ?>"><?php echo $cat[$i]["c_name"]; ?></option>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Select Product Sub Category *</label>
+                                            <select class="form-control default-select" id="productSubCategory" name="product_subcategory"  required>
+                                                <?php
+                                                $fetch_sub_cat = $db_handle->runQuery("select * from sub_cat order by id desc");
+                                                $no_fetch_sub_cat = $db_handle->numRows("select * from sub_cat order by id desc");
+                                                for($i=0; $i < $no_fetch_sub_cat; $i++){
+                                                    ?>
+                                                    <option value="<?php echo $fetch_sub_cat[$i]["id"]; ?>"><?php echo $fetch_sub_cat[$i]["sub_cat_name"]; ?></option>
                                                     <?php
                                                 }
                                                 ?>
@@ -115,19 +125,8 @@ if (!isset($_SESSION['userid'])) {
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label>Today Deal *</label>
-                                            <select class="form-control default-select" id="sel1" name="today_deal" required>
-                                                <option value="0" selected>No</option>
-                                                <option value="1">Yes</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-12">
                                             <label>Product Description * (CN)</label>
                                             <textarea class="form-control" rows="4" id="comment" name="product_description" required></textarea>
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label>Product Description * (EN)</label>
-                                            <textarea class="form-control" rows="4" id="comment" name="product_description_en" required></textarea>
                                         </div>
                                     </div>
                                     <div class="text-center">
@@ -153,6 +152,37 @@ if (!isset($_SESSION['userid'])) {
 ***********************************-->
 
 <?php include 'include/js.php'; ?>
+
+
+
+
+<!--<script>
+        $(document).ready(function() {
+        $('#productCategory').change(function() {
+            console.log('onchange working');
+            let categoryId = $(this).val();
+
+            // Perform AJAX request
+            $.ajax({
+                url: 'fetch_subcat.php',
+                type: 'POST',
+                data: { categoryId: categoryId },
+                success: function(response) {
+                    // Clear existing options
+                    $('#productSubCategory').empty();
+
+                    // Append new options
+                    $.each(response, function(index, subCategory) {
+                        $('#productSubCategory').append($('<option>', {
+                            value: subCategory.id,
+                            text: subCategory.sub_cat_name
+                        }));
+                    });
+                }
+            });
+        });
+    });
+</script>-->
 
 <script>
     CKEDITOR.replace('product_description');

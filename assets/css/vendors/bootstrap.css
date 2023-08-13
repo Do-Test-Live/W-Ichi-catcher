@@ -156,7 +156,7 @@ h6, .h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: -0.2rem;
+    margin-bottom: 1rem
 }
 
 abbr[title], abbr[data-bs-original-title] {
@@ -656,6 +656,7 @@ progress {
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y)
 }
 
 .col {
@@ -5348,7 +5349,7 @@ textarea.form-control-lg {
     align-items: center;
     width: 100%;
     padding: 1rem 1.25rem;
-    font-size: 18px;
+    font-size: 1rem;
     color: #212529;
     text-align: left;
     background-color: #fff;
@@ -5356,7 +5357,7 @@ textarea.form-control-lg {
     border-radius: 0;
     overflow-anchor: none;
     -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 @media (prefers-reduced-motion: reduce) {

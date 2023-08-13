@@ -20,6 +20,10 @@ RewriteRule ^Add-Category addCategory.php [NE,L]
 
 RewriteRule ^Category category.php [NE,L]
 
+RewriteRule ^Add-Subcategory addSubcat.php [NE,L]
+
+RewriteRule ^Subcategory subcategory.php [NE,L]
+
 RewriteRule ^Add-Store addStore.php [NE,L]
 
 RewriteRule ^Store store.php [NE,L]

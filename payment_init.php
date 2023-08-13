@@ -20,11 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $input = file_get_contents('php://input');
     $request = json_decode($input);
 
-    $productName='Royal Cheese Purchase';
+    $productName='Enjoy';
 
     $productPrice=$_GET['total_purchase'];
 
-    $productID='Royal Cheese';
+    $productID='Enjoy';
 
     $currency='hkd';
 }

@@ -3,9 +3,9 @@ class DBController {
     private $host = "localhost";
     private $user = "root";
     private $password = "";
-    private $database = "royal_cheese";
+    private $database = "ichicatchereco";
     private $from_email='business@rcrpetsworkshop.com';
-    private $notification_email='mingowhk@gmail.com';
+    private $notification_email='admin@enjoy.com';
     private $conn;
 
     function __construct() {

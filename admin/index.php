@@ -28,7 +28,7 @@ if (isset($_SESSION['userid'])) {
                             <div class="col-xl-12">
                                 <div class="auth-form">
 									<div class="text-center mb-3">
-                                        <h1 class="text-white">Royal Cheese Admin</h1>
+                                        <h1 class="text-white">Ichi-Catcher Admin</h1>
 									</div>
                                     <h4 class="text-center mb-4 text-white">Sign in your account</h4>
                                     <form action="" method="post">

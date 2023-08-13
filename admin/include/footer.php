@@ -3,7 +3,7 @@
        ***********************************-->
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © Ichi Catcher Admin</p>
+        <p>Copyright © Enjoy Admin</p>
     </div>
 </div>
 <!--**********************************
