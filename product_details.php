@@ -22,7 +22,7 @@ include ('cart_backend.php');
     <meta name="keywords" content="Royal Cheese">
     <meta name="author" content="Royal Cheese">
     <link rel="icon" href="assets/images/favicon/f7.png" type="image/x-icon">
-    <title>Ichi-catcher product Details</title>
+    <title>Product Details | ICHI CATCHER</title>
     <!-- bootstrap css -->
     <link id="rtl-link" rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
 
@@ -82,7 +82,6 @@ include ('cart_backend.php');
             <div class="row">
                 <div class="col-xxl-3 d-xxl-block d-none">
                     <div class="top-left-header">
-                        <i class="iconly-Location icli text-white"></i>
                         <span class="text-white">Hong Kong</span>
                     </div>
                 </div>
@@ -702,7 +701,7 @@ include ('cart_backend.php');
                             <a href="javascript:void(0)" class="light-text">
                                 <div class="inform-box">
                                     <i data-feather="phone"></i>
-                                    <p>Call us: 000-000-0000</p>
+                                    <p>Call us:  +852 44020266</p>
                                 </div>
                             </a>
                         </li>
@@ -711,7 +710,7 @@ include ('cart_backend.php');
                             <a href="javascript:void(0)" class="light-text">
                                 <div class="inform-box">
                                     <i data-feather="mail"></i>
-                                    <p>Email Us:example@.com</p>
+                                    <p>Email Us: Business@ichi-catcher.com</p>
                                 </div>
                             </a>
                         </li>
@@ -722,7 +721,7 @@ include ('cart_backend.php');
 
         <div class="sub-footer sub-footer-lite section-b-space section-t-space">
             <div class="left-footer">
-                <p class="light-text">2023 Copyright By Ichi-Catcher </br> Powered By NGT</p>
+                <p class="light-text">2023 Copyright By Ichi-Catcher <br/> Powered By NGT</p>
             </div>
 
             <ul class="payment-box">

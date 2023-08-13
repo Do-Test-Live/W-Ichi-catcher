@@ -11,7 +11,7 @@ if (!isset($_SESSION['userid'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Subcategory | Royal Cheese Admin</title>
+    <title>Subcategory | ICHI CATCHER Admin</title>
     <!-- Datatable -->
     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <?php include 'include/css.php'; ?>

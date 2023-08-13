@@ -1,6 +1,6 @@
 <!-- Favicon icon -->
 
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/f7.png">
 <link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
 <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">

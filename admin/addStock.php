@@ -11,7 +11,7 @@ if (!isset($_SESSION['userid'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Add Product | Royal Cheese Admin</title>
+    <title>Add Product | ICHI CATCHER Admin</title>
     <?php include 'include/css.php'; ?>
     <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />

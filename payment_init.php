@@ -20,11 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $input = file_get_contents('php://input');
     $request = json_decode($input);
 
-    $productName='Ichi Catcher';
+    $productName='ICHI CATCHER';
 
     $productPrice=$_GET['total_purchase'];
 
-    $productID='Ichi Catcher';
+    $productID='ICHI CATCHER';
 
     $currency='hkd';
 }

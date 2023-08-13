@@ -18,7 +18,7 @@ include ('cart_backend.php');
     <meta name="keywords" content="Enjoy">
     <meta name="author" content="Enjoy">
     <link rel="icon" href="assets/images/favicon/f7.png" type="image/x-icon">
-    <title>Ichi-catcher Shop</title>
+    <title>Shop | ICHI CATCHER</title>
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -58,24 +58,12 @@ include ('cart_backend.php');
 </head>
 
 <body>
-
-<!-- Loader Start -->
-<!--<div class="fullpage-loader">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>-->
-<!-- Loader End -->
 <header class="">
     <div class="header-top">
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-xxl-3 d-xxl-block d-none">
                     <div class="top-left-header">
-                        <i class="iconly-Location icli text-white"></i>
                         <span class="text-white">Hong Kong</span>
                     </div>
                 </div>
@@ -115,29 +103,6 @@ include ('cart_backend.php');
                                          class="img-fluid blur-up lazyload" alt="">
                                     <span>CN</span>
                                 </button>
-                                <!--   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
-                                       <li>
-                                           <a class="dropdown-item" href="javascript:void(0)" id="english">
-                                               <img src="assets/images/country/united-kingdom.png"
-                                                    class="img-fluid blur-up lazyload" alt="">
-                                               <span>English</span>
-                                           </a>
-                                       </li>
-                                       <li>
-                                           <a class="dropdown-item" href="javascript:void(0)" id="france">
-                                               <img src="assets/images/country/germany.png"
-                                                    class="img-fluid blur-up lazyload" alt="">
-                                               <span>Germany</span>
-                                           </a>
-                                       </li>
-                                       <li>
-                                           <a class="dropdown-item" href="javascript:void(0)" id="chinese">
-                                               <img src="assets/images/country/turkish.png"
-                                                    class="img-fluid blur-up lazyload" alt="">
-                                               <span>Turki</span>
-                                           </a>
-                                       </li>
-                                   </ul>-->
                             </div>
                         </li>
                         <li class="right-nav-list">
@@ -146,18 +111,6 @@ include ('cart_backend.php');
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                     <span>USD</span>
                                 </button>
-                                <!-- <ul class="dropdown-menu dropdown-menu-end sm-dropdown-menu"
-                                     aria-labelledby="select-dollar">
-                                     <li>
-                                         <a class="dropdown-item" id="aud" href="javascript:void(0)">AUD</a>
-                                     </li>
-                                     <li>
-                                         <a class="dropdown-item" id="eur" href="javascript:void(0)">EUR</a>
-                                     </li>
-                                     <li>
-                                         <a class="dropdown-item" id="cny" href="javascript:void(0)">CNY</a>
-                                     </li>
-                                 </ul>-->
                             </div>
                         </li>
                     </ul>
@@ -222,75 +175,6 @@ include ('cart_backend.php');
                                         </div>
                                     </div>
                                 </li>
-                                <!--  <li class="right-side">
-                                      <a href="wishlist.html" class="btn p-0 position-relative header-wishlist">
-                                          <i data-feather="bookmark"></i>
-                                      </a>
-                                  </li>-->
-                                <!--  <li class="right-side">
-                                      <div class="onhover-dropdown header-badge">
-                                          <button type="button" class="btn p-0 position-relative header-wishlist">
-                                              <i data-feather="shopping-cart"></i>
-                                              <span class="position-absolute top-0 start-100 translate-middle badge">2
-                                                      <span class="visually-hidden">unread messages</span>
-                                                  </span>
-                                          </button>
-
-                                          <div class="onhover-div">
-                                              <ul class="cart-list">
-                                                  <li class="product-box-contain">
-                                                      <div class="drop-cart">
-                                                          <a href="product-left-thumbnail.html" class="drop-image">
-                                                              <img src="assets/images/vegetable/product/1.png"
-                                                                   class="blur-up lazyload" alt="">
-                                                          </a>
-
-                                                          <div class="drop-contain">
-                                                              <a href="product-left-thumbnail.html">
-                                                                  <h5>Fantasy Crunchy Choco Chip Cookies</h5>
-                                                              </a>
-                                                              <h6><span>1 x</span> $80.58</h6>
-                                                              <button class="close-button close_button">
-                                                                  <i class="fa-solid fa-xmark"></i>
-                                                              </button>
-                                                          </div>
-                                                      </div>
-                                                  </li>
-
-                                                  <li class="product-box-contain">
-                                                      <div class="drop-cart">
-                                                          <a href="product-left-thumbnail.html" class="drop-image">
-                                                              <img src="assets/images/vegetable/product/2.png"
-                                                                   class="blur-up lazyload" alt="">
-                                                          </a>
-
-                                                          <div class="drop-contain">
-                                                              <a href="product-left-thumbnail.html">
-                                                                  <h5>Peanut Butter Bite Premium Butter Cookies 600 g
-                                                                  </h5>
-                                                              </a>
-                                                              <h6><span>1 x</span> $25.68</h6>
-                                                              <button class="close-button close_button">
-                                                                  <i class="fa-solid fa-xmark"></i>
-                                                              </button>
-                                                          </div>
-                                                      </div>
-                                                  </li>
-                                              </ul>
-
-                                              <div class="price-box">
-                                                  <h5>Total :</h5>
-                                                  <h4 class="theme-color fw-bold">$106.58</h4>
-                                              </div>
-
-                                              <div class="button-group">
-                                                  <a href="cart.html" class="btn btn-sm cart-button">View Cart</a>
-                                                  <a href="checkout.html" class="btn btn-sm cart-button theme-bg-color
-                                                      text-white">Checkout</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </li>-->
                                 <li class="right-side">
                                     <div class="onhover-dropdown header-badge">
                                         <a href="cart.php" class="btn p-0 position-relative header-wishlist">
@@ -934,7 +818,7 @@ include ('cart_backend.php');
                             <a href="javascript:void(0)" class="light-text">
                                 <div class="inform-box">
                                     <i data-feather="phone"></i>
-                                    <p>Call us: 000-000-0000</p>
+                                    <p>Call us:  +852 44020266</p>
                                 </div>
                             </a>
                         </li>
@@ -943,7 +827,7 @@ include ('cart_backend.php');
                             <a href="javascript:void(0)" class="light-text">
                                 <div class="inform-box">
                                     <i data-feather="mail"></i>
-                                    <p>Email Us:example@.com</p>
+                                    <p>Email Us: Business@ichi-catcher.com</p>
                                 </div>
                             </a>
                         </li>
@@ -954,7 +838,7 @@ include ('cart_backend.php');
 
         <div class="sub-footer sub-footer-lite section-b-space section-t-space">
             <div class="left-footer">
-                <p class="light-text">2023 Copyright By Ichi-Catcher </br> Powered By NGT</p>
+                <p class="light-text">2023 Copyright By Ichi-Catcher <br/> Powered By NGT</p>
             </div>
 
             <ul class="payment-box">

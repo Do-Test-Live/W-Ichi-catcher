@@ -13,7 +13,7 @@ $id = $_GET['id'];
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Order Details | Royal Cheese Admin</title>
+    <title>Order Details | ICHI CATCHER Admin</title>
     <!-- Datatable -->
     <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <?php include 'include/css.php'; ?>
