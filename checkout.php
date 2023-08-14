@@ -185,7 +185,7 @@ include ('cart_backend.php');
                                     <i class="fa-solid fa-bars"></i>
                                 </span>
                         </button>
-                        <a href="index.html" class="web-logo nav-logo">
+                        <a href="index.php" class="web-logo nav-logo">
                             <img src="assets/images/logo/logo-1.png" style="height: 52px;" class="img-fluid blur-up lazyload" alt="">
                         </a>
 
@@ -566,7 +566,7 @@ include ('cart_backend.php');
                             <a href="javascript:void(0)" class="light-text">
                                 <div class="inform-box">
                                     <i data-feather="phone"></i>
-                                    <p>Call us:  +852 44020266</p>
+                                    <p>Whatsapp/Phone:  +852 44020266</p>
                                 </div>
                             </a>
                         </li>

@@ -79,20 +79,6 @@ if (!isset($_SESSION['userid'])) {
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Product Cost</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" name="cost"
-                                                       value="<?php echo $data[0]["cost"]; ?>" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label class="col-sm-3 col-form-label">Product Weight (For Multiple Please Separate with Comma)</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" name="product_weight"
-                                                       value="<?php echo $data[0]["product_weight"]; ?>" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
                                             <label class="col-sm-3 col-form-label">Product Code</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" name="p_code"

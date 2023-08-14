@@ -66,10 +66,6 @@ if (!isset($_SESSION['userid'])) {
                                             <input type="text" class="form-control" name="product_code" placeholder="" required>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label>Product Weight (For Multiple Please Separate with Comma)</label>
-                                            <input type="text" class="form-control" name="product_weight" placeholder="" required>
-                                        </div>
-                                        <div class="form-group col-md-12">
                                             <label>Select Product Category *</label>
                                             <select class="form-control default-select" id="productCategory" name="product_category" required>
                                                 <?php
@@ -100,10 +96,6 @@ if (!isset($_SESSION['userid'])) {
                                         <div class="form-group col-md-12">
                                             <label>Product Selling Price * (For Multiple Please Separate with Comma)</label>
                                             <input type="text" class="form-control" placeholder="" name="selling_price" required>
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label>Product Cost *</label>
-                                            <input type="text" class="form-control" placeholder="" name="cost" required>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Product Image *</label>

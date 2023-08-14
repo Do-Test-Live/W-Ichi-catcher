@@ -33,8 +33,6 @@ if (isset($_POST['updateProduct'])) {
     $product_category = $db_handle->checkValue($_POST['product_category']);
     $status = $db_handle->checkValue($_POST['status']);
     $product_price = $db_handle->checkValue($_POST['product_price']);
-    $cost = $db_handle->checkValue($_POST['cost']);
-    $product_weight = $db_handle->checkValue($_POST['product_weight']);
     $query = '';
 
     $updated_at = date("Y-m-d H:i:s");
@@ -92,7 +90,7 @@ if (isset($_POST['updateProduct'])) {
     }
 
     $data = $db_handle->insertQuery("UPDATE `product` SET `category_id`='$product_category',`product_code`='$product_code',`p_name`='$p_name',`description`='$product_description',
-                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price',`cost` = '$cost',`product_weight` = '$product_weight'" . $query . " WHERE id={$id}");
+                     `status`='$status',`updated_at`='$updated_at',`product_price`='$product_price'" . $query . " WHERE id={$id}");
     if($data){
         echo "<script>
                 document.cookie = 'alert = 3;';
