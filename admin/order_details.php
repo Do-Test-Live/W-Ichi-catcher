@@ -126,7 +126,6 @@ $id = $_GET['id'];
                                             <th>Product Quantity</th>
                                             <th>Unit Price</th>
                                             <th>Total Price</th>
-                                            <th>Status</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -143,19 +142,6 @@ $id = $_GET['id'];
                                                 <td><?php echo $invoice_details[$i]["product_quantity"]; ?></td>
                                                 <td><?php echo $invoice_details[$i]["product_unit_price"]; ?></td>
                                                 <td><?php echo $invoice_details[$i]["product_total_price"]; ?></td>
-                                                <td><?php
-                                                    $stock = $db_handle->runQuery("select quantity from stock where product_id = '$product_id'");
-                                                    $num_rows = $db_handle->numRows("select quantity from stock where product_id = '$product_id'");
-                                                    if($num_rows > 0){
-                                                        if($stock[0]['quantity'] > 0){
-                                                            echo 'In Stock';
-                                                        }else{
-                                                            echo 'Out of Stock';
-                                                        }
-                                                    }else{
-                                                        echo 'Pre Order';
-                                                    }
-                                                    ?></td>
                                             </tr>
                                             <?php
                                         }
