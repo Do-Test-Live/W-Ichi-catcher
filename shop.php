@@ -18,7 +18,7 @@ include ('cart_backend.php');
     <meta name="keywords" content="Enjoy">
     <meta name="author" content="Enjoy">
     <link rel="icon" href="assets/images/favicon/f7.png" type="image/x-icon">
-    <title>Shop - Ichi Catcher</title>
+    <title>Enjoy</title>
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -140,7 +140,7 @@ include ('cart_backend.php');
                                             <?php
                                         }
                                         ?>
-                                        <a href="index.php?catId=<?php echo $fetch_cat[$i]['id']; ?>" style="font-size: 20px;color: #222;text-decoration: none;"><?php echo $fetch_cat[$i]['c_name']; ?></a>
+                                            <a href="shop.php?catId=<?php echo $fetch_cat[$i]['id']; ?>" style="font-size: 20px;color: #222;text-decoration: none;"><?php echo $fetch_cat[$i]['c_name']; ?></a>
                                     </h2>
                                     <div id="collapse<?php echo $fetch_cat[$i]['id']; ?>"
                                          class="accordion-collapse collapse show"
@@ -150,7 +150,7 @@ include ('cart_backend.php');
                                             for ($j = 0; $j < $no_fetch_sub_cat; $j++) {
                                                 ?>
                                                 <ul class="category-list custom-padding custom-height">
-                                                    <li><a href="index.php?subcat=<?php echo $fetch_sub_cat[$j]['id'];?>"><?php echo $fetch_sub_cat[$j]['sub_cat_name'];?></a></li>
+                                                    <li><a href="shop.php?subcat=<?php echo $fetch_sub_cat[$j]['id'];?>"><?php echo $fetch_sub_cat[$j]['sub_cat_name'];?></a></li>
                                                 </ul>
                                                 <?php
                                             }
@@ -258,7 +258,7 @@ include ('cart_backend.php');
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
                             <li class="page-item">
-                                <a class="page-link" href="index.php?catId=<?php echo $id; ?>&page=1" tabindex="-1"
+                                <a class="page-link" href="shop.php?catId=<?php echo $id; ?>&page=1" tabindex="-1"
                                    aria-disabled="true">
                                     <i class="fa-solid fa-angles-left"></i>
                                 </a>
@@ -270,7 +270,7 @@ include ('cart_backend.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link"
-                                       href="index.php?catId=<?php echo $id; ?>&page=<?php echo $n_page; ?>"
+                                       href="shop.php?catId=<?php echo $id; ?>&page=<?php echo $n_page; ?>"
                                        tabindex="-1" aria-disabled="true">
                                         Previous
                                     </a>
@@ -298,7 +298,7 @@ include ('cart_backend.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link"
-                                       href="index.php?catId=<?php echo $id; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                       href="shop.php?catId=<?php echo $id; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
                                 </li>
                                 <?php
                             }
@@ -310,7 +310,7 @@ include ('cart_backend.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link"
-                                       href="index.php?catId=<?php echo $id; ?>&page=<?php echo $n_page; ?>">
+                                       href="shop.php?catId=<?php echo $id; ?>&page=<?php echo $n_page; ?>">
                                         Next
                                     </a>
                                 </li>
@@ -319,7 +319,7 @@ include ('cart_backend.php');
                             ?>
                             <li class="page-item">
                                 <a class="page-link"
-                                   href="index.php?catId=<?php echo $id; ?>&page=<?php echo $i - 1; ?>">
+                                   href="shop.php?catId=<?php echo $id; ?>&page=<?php echo $i - 1; ?>">
                                     <i class="fa-solid fa-angles-right"></i>
                                 </a>
                             </li>
@@ -399,7 +399,7 @@ include ('cart_backend.php');
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
                             <li class="page-item">
-                                <a class="page-link" href="index.php?catId=<?php echo $id; ?>&page=1" tabindex="-1"
+                                <a class="page-link" href="shop.php?catId=<?php echo $id; ?>&page=1" tabindex="-1"
                                    aria-disabled="true">
                                     <i class="fa-solid fa-angles-left"></i>
                                 </a>
@@ -411,7 +411,7 @@ include ('cart_backend.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link"
-                                       href="index.php?subcat=<?php echo $id; ?>&page=<?php echo $n_page; ?>"
+                                       href="shop.php?subcat=<?php echo $id; ?>&page=<?php echo $n_page; ?>"
                                        tabindex="-1" aria-disabled="true">
                                         Previous
                                     </a>
@@ -439,7 +439,7 @@ include ('cart_backend.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link"
-                                       href="index.php?subcat=<?php echo $id; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                       href="shop.php?subcat=<?php echo $id; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
                                 </li>
                                 <?php
                             }
@@ -451,7 +451,7 @@ include ('cart_backend.php');
                                 ?>
                                 <li class="page-item">
                                     <a class="page-link"
-                                       href="index.php?subcat=<?php echo $id; ?>&page=<?php echo $n_page; ?>">
+                                       href="shop.php?subcat=<?php echo $id; ?>&page=<?php echo $n_page; ?>">
                                         Next
                                     </a>
                                 </li>
@@ -460,7 +460,7 @@ include ('cart_backend.php');
                             ?>
                             <li class="page-item">
                                 <a class="page-link"
-                                   href="index.php?subcat=<?php echo $id; ?>&page=<?php echo $i - 1; ?>">
+                                   href="shop.php?subcat=<?php echo $id; ?>&page=<?php echo $i - 1; ?>">
                                     <i class="fa-solid fa-angles-right"></i>
                                 </a>
                             </li>
@@ -539,7 +539,7 @@ include ('cart_backend.php');
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
                             <li class="page-item">
-                                <a class="page-link" href="index.php?catId=1&page=1" tabindex="-1" aria-disabled="true">
+                                <a class="page-link" href="shop.php?catId=1&page=1" tabindex="-1" aria-disabled="true">
                                     <i class="fa-solid fa-angles-left"></i>
                                 </a>
                             </li>
@@ -549,7 +549,7 @@ include ('cart_backend.php');
                                 $n_page = $c_page - 1;
                                 ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="index.php?page=<?php echo $n_page; ?>" tabindex="-1"
+                                    <a class="page-link" href="shop.php?page=<?php echo $n_page; ?>" tabindex="-1"
                                        aria-disabled="true">
                                         Previous
                                     </a>
@@ -575,7 +575,7 @@ include ('cart_backend.php');
                                 }
                                 ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                    <a class="page-link" href="shop.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
                                 </li>
                                 <?php
                             }
@@ -586,7 +586,7 @@ include ('cart_backend.php');
                                     $n_page = $_GET['page'] + 1;
                                 ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="index.php?page=<?php echo $n_page; ?>">
+                                    <a class="page-link" href="shop.php?page=<?php echo $n_page; ?>">
                                         Next
                                     </a>
                                 </li>
@@ -594,7 +594,7 @@ include ('cart_backend.php');
                             }
                             ?>
                             <li class="page-item">
-                                <a class="page-link" href="index.php?page=<?php echo $i - 1; ?>">
+                                <a class="page-link" href="shop.php?page=<?php echo $i - 1; ?>">
                                     <i class="fa-solid fa-angles-right"></i>
                                 </a>
                             </li>
