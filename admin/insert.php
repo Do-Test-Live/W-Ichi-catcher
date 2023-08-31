@@ -248,3 +248,35 @@ if (isset($_POST['add_sub_cat'])) {
                 </script>";
     }
 }
+
+if (isset($_POST['add_gift'])) {
+    $gift_name = $db_handle->checkValue($_POST['gift_name']);
+    $inserted_at = date("Y-m-d H:i:s");
+
+    $image = '';
+    if (!empty($_FILES['gift_image']['name'])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['gift_image']['name'];
+        $file_size = $_FILES['gift_image']['size'];
+        $file_tmp = $_FILES['gift_image']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg") {
+            echo "<script>
+                document.cookie = 'alert = 5;';
+                window.location.href='Add-Gift';
+                </script>";
+
+        } else {
+            move_uploaded_file($file_tmp, "assets/gift/" . $file_name);
+            $image = "assets/gift/" . $file_name;
+        }
+    }
+
+    $insert = $db_handle->insertQuery("INSERT INTO `gift_list`(`gift_title`, `gift_image`, `inserted_at`) VALUES ('$gift_name','$image','$inserted_at')");
+
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Add-Gift';
+                </script>";
+}

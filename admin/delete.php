@@ -52,3 +52,9 @@ if(isset($_GET['subcatId'])){
     echo 'success';
 }
 
+if(isset($_GET['giftId'])){
+    $data = $db_handle->runQuery("select * FROM `gift_list` WHERE id='{$_GET['giftId']}'");
+    unlink($data[0]['gift_image']);
+    $db_handle->insertQuery("delete from gift_list where id=" . $_GET['giftId'] . "");
+    echo 'success';
+}

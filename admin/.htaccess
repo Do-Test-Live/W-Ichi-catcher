@@ -70,3 +70,9 @@ RewriteRule ^Delivery-Charges delivery_charges.php [NE,L]
 
 RewriteRule ^Order-Details order_details.php [NE,L]
 
+RewriteRule ^Gift gift_prediction.php [NE,L]
+
+RewriteRule ^Add-Gift add_gift.php [NE,L]
+
+RewriteRule ^View-Gift view_gift.php [NE,L]
+

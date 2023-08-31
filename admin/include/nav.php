@@ -59,47 +59,7 @@
                     <li><a href="Product">Product List</a></li>
                 </ul>
             </li>
-           <!-- <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-controls-7"></i>
-                    <span class="nav-text">Stock</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="Add-Stock">Add Stock</a></li>
-                    <li><a href="Stock">Stock List</a></li>
-                </ul>
-            </li>-->
-      <!--      <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-database-2"></i>
-                    <span class="nav-text">Course</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="Add-Course">Add Course</a></li>
-                    <li><a href="Course">Course List</a></li>
-                </ul>
-            </li>-->
-          <!--  <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-notepad"></i>
-                    <span class="nav-text">Promo Code</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="Add-Promo-Code">Add Promo Code</a></li>
-                    <li><a href="Promo-Code">Promo Code List</a></li>
-                </ul>
-            </li>-->
-           <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-layer-1"></i>
-                    <span class="nav-text">Analysis</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="Product-Analysis">Product Analysis</a></li>
-                    <li><a href="Business-Analysis">Business Analysis</a></li>
-                    <li><a href="Store-Analysis">Store Analysis</a></li>
-                    <li><a href="Profit-Loss">Profit-Loss Analysis</a></li>
-                </ul>
-            </li>-->
+
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
@@ -110,40 +70,30 @@
                     <li><a href="Confirm-Order">Complete order</a></li>
                 </ul>
             </li>
-         <!--   <li>
-                <a href="Review" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-settings-6"></i>
-                    <span class="nav-text">Review</span>
-                </a>
-            </li>-->
-          <!--  <li>
-                <a href="Report" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-settings-2"></i>
-                    <span class="nav-text">Report</span>
-                </a>
-            </li>-->
+
             <li>
                 <a href="Customer">
                     <i class="flaticon-381-internet"></i>
                     <span class="nav-text">Customer</span>
                 </a>
             </li>
-          <!--  <li>
-                <a href="Delivery-Charges">
-                    <i class="flaticon-381-controls-3"></i>
-                    <span class="nav-text">Delivery Charges</span>
-                </a>
-            </li>-->
-            <!--<li>
+
+            <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
-                    <span class="nav-text">Admin</span>
+                    <span class="nav-text">Gift</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="Add-Admin">Add Admin</a></li>
-                    <li><a href="Admin">Admin List & Role</a></li>
+                    <li><a href="Add-Gift">Add</a></li>
+                    <li><a href="View-Gift">View</a></li>
                 </ul>
-            </li>-->
+            </li>
+            <li>
+                <a href="Gift" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-settings-6"></i>
+                    <span class="nav-text">Gift Probability</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

@@ -340,8 +340,8 @@ include ('cart_backend.php');
                         $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
                         // calculate the offset for the SQL query
                         $offset = ($current_page - 1) * 8;
-                        $fetch_products = $db_handle->runQuery("SELECT * FROM sub_cat,`product` WHERE product.status = '1' and product.subcat_id = sub_cat.id limit 8 OFFSET $offset");
-                        $num_rows = $db_handle->numRows(" SELECT * FROM sub_cat,`product` WHERE product.status = '1' and product.subcat_id = sub_cat.id limit 8 OFFSET $offset");
+                        $fetch_products = $db_handle->runQuery("SELECT * FROM sub_cat,`product` WHERE product.status = '1' and product.subcat_id = sub_cat.id and product.subcat_id = '$id' limit 8 OFFSET $offset");
+                        $num_rows = $db_handle->numRows(" SELECT * FROM sub_cat,`product` WHERE product.status = '1' and product.subcat_id = sub_cat.id and product.subcat_id = '$id' limit 8 OFFSET $offset");
                         for ($i = 0; $i < $num_rows; $i++) {
                             ?>
                             <div class="search_content">

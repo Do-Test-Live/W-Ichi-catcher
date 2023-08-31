@@ -346,3 +346,54 @@ if (isset($_POST['updateSubCategory'])) {
     }
 }
 
+if(isset($_POST['update_probability'])){
+    $g1 = $db_handle->checkValue($_POST['g1']);
+    $g2 = $db_handle->checkValue($_POST['g2']);
+    $g3 = $db_handle->checkValue($_POST['g3']);
+    $g4 = $db_handle->checkValue($_POST['g4']);
+    $g5 = $db_handle->checkValue($_POST['g5']);
+    $g6 = $db_handle->checkValue($_POST['g6']);
+    $g7 = $db_handle->checkValue($_POST['g7']);
+    $g8 = $db_handle->checkValue($_POST['g8']);
+    $g9 = $db_handle->checkValue($_POST['g9']);
+
+    $update = $db_handle->insertQuery("UPDATE `gifts` SET `gift1`='$g1',`gift2`='$g2',`gift3`='$g3',`gift4`='$g4',`gift5`='$g5',`gift6`='$g6',`gift7`='$g7',`gift8`='$g8',`gift9`='$g9' WHERE id = '1'");
+    if($update){
+        echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='Gift';
+                </script>";
+    }
+}
+
+
+if (isset($_POST['update_gift'])) {
+    $id = $db_handle->checkValue($_POST['id']);
+    $gift_name = $db_handle->checkValue($_POST['gift_name']);
+    $updated_at = date("Y-m-d H:i:s");
+    $image = '';
+    $query = '';
+    if (!empty($_FILES['gift_image']['name'])) {
+        $RandomAccountNumber = mt_rand(1, 99999);
+        $file_name = $RandomAccountNumber . "_" . $_FILES['gift_image']['name'];
+        $file_size = $_FILES['gift_image']['size'];
+        $file_tmp = $_FILES['gift_image']['tmp_name'];
+
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        if ($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg" && $file_type != "gif") {
+            $image = '';
+        } else {
+            $data = $db_handle->runQuery("select * FROM `gift_list` WHERE id='{$id}'");
+            unlink($data[0]['gift_image']);
+            move_uploaded_file($file_tmp, "assets/gift/" . $file_name);
+            $image = "assets/gift/" . $file_name;
+            $query .= ",`gift_image`='" . $image . "'";
+        }
+    }
+
+    $data = $db_handle->insertQuery("UPDATE `gift_list` SET `gift_title`='$gift_name',`updated_at`='$updated_at'" . $query . " WHERE id='{$id}'");
+    echo "<script>
+                document.cookie = 'alert = 3;';
+                window.location.href='View-Gift';
+                </script>";
+}
